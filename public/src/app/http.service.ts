@@ -33,4 +33,13 @@ export class HttpService {
     return this._http.delete('/delete/'+ id);
   }
 
+  addReview(review){
+    console.log("I am really doing it with teh review")
+    return this._http.post('/newreview', review);
+  }
+
+  addReviewSolo(review) {
+    console.log("This is a different review add")
+    return this._http.post('/addReview/'+ review._id, review);
+  }
 }

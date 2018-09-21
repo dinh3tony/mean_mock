@@ -1,16 +1,15 @@
+<h1 class="movie">Movie List</h1><button class='make btn-primary' [routerLink]="['new']">Add Movie</button>
 <table class="table table-bordered " >
     <thead class="thead-dark">
       <tr>
           <th >Title</th>
-          <th>Description</th>
           <th>Actions Available</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let s of stuff" >
         <td> {{s.title}}</td>
-        <td> {{s.description}}</td>
-        <td><button class="btn btn-primary" [routerLink]="['edit', s._id]" >Edit</button>  <button (click)="deleteOneAuthor(author['_id'])" class="btn btn-danger">Delete</button></td>
+        <td><button class="btn btn-primary" [routerLink]="['showMovie', s._id]" >Read Reviews</button>  <button [routerLink]="['review/new',s._id]" class="btn btn-danger">Write review</button></td>
       </tr>
     </tbody>
   

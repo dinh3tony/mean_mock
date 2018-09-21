@@ -1,0 +1,51 @@
+<h1 class="text-center">{{newStuff.title}}</h1>
+
+<div>
+    <p class="error" *ngFor = "let error of errors">
+        {{error}}
+    </p>
+    
+  <form (submit)="createReview()" class="postForm creater text-center">
+
+        <div *ngIf="name.invalid && (name.dirty || name.touched)"
+        class="alert alert-danger">
+        <!-- //*** *************** Division between movie title and name of reviewer ********** -->
+        <div *ngIf="name.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="name.errors.minlength">
+          Name must be at least 3 characters long.
+        </div>
+        </div>
+          Name of Reviewer:<br>
+        <input type="text" #name='ngModel' required  minlength="3" maxlength="24" name="newStuff.name" [(ngModel)]="newStuff.name" /> <br>
+        Rating:<br>
+        <select class="thingy" name="newStuff.rating" [(ngModel)]="newStuff.rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select> <br>
+        Review: <br>
+        <textarea #review='ngModel' required  minlength="3" maxlength="40" name="newStuff.review" [(ngModel)]="newStuff.review"></textarea>
+        <br>
+        <div *ngIf="review.invalid && (review.dirty || review.touched)"
+        class="alert alert-danger">
+    
+        <div *ngIf="review.errors.required">
+        Review is required.
+      </div>
+      <div *ngIf="review.errors.minlength">
+        Review must be at least 3 characters long.
+      </div>
+      </div>
+        <span *ngIf="review.valid && name.valid">
+            <input class="btn-primary" type="submit" value="Add Movie" />
+        </span>
+        
+        <br>
+        <a class="btn-danger btn" [routerLink]="['/movies']">Cancel</a>
+    </form>
+    
+</div>

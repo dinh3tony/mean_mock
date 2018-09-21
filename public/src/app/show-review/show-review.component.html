@@ -1,0 +1,24 @@
+<button (click)="deleteOneStuff(title['_id'])" class="btn btn-danger">Delete</button>
+<h1>{{title.title}}</h1>
+<table class="table table-bordered " >
+    <thead class="thead-dark">
+      <tr>
+          <th >Reviewer</th>
+          <th>Stars</th>
+          <th>Reviews</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of stuff" >
+        <td> {{s.name}}</td>
+        <td> {{s.rating}}</td>
+        <td> {{s.review}}</td>
+      </tr>
+    </tbody>
+  
+  
+  
+  
+  
+  
+  </table>

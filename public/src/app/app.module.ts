@@ -12,6 +12,8 @@ import { ShowComponent } from './show/show.component';
 import { EditComponent } from './edit/edit.component';
 import { HomeComponent } from './home/home.component';
 import { ShowAllComponent } from './show-all/show-all.component';
+import { ShowReviewComponent } from './show-review/show-review.component';
+import { NewReviewComponent } from './new-review/new-review.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ShowAllComponent } from './show-all/show-all.component';
     ShowComponent,
     EditComponent,
     HomeComponent,
-    ShowAllComponent
+    ShowAllComponent,
+    ShowReviewComponent,
+    NewReviewComponent
   ],
   imports: [
     BrowserModule,

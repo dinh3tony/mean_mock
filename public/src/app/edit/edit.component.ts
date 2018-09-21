@@ -54,7 +54,7 @@ export class EditComponent implements OnInit {
   }
 
   goHome() {
-    this._router.navigate(['/products'])
+    this._router.navigate(['/movies'])
 
   }
 
