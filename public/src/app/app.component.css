@@ -1,0 +1,19 @@
+* {
+    /* margin: 0px;
+    padding: 0px; */
+    /* outline: 1px solid red; */
+}
+
+.navbar {
+    background-color: lightblue;
+    padding: 10px;
+}
+.icons {
+    color: white;
+    background-color: lightblue;
+}
+
+.router {
+    background-color: salmon;
+}
+
